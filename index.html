@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>แผนผังโรงพยาบาลไพรบึง</title>
+  <link rel="stylesheet" href="css/map.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+</head>
+<body>
+
+  <div class="map-container" style="margin-top: 20px;">
+    <h2>แผนผังโรงพยาบาลไพรบึง</h2>
+    <img src="รูปภาพ/แผนผัง.png" alt="แผนผังอาคาร">
+    <div class="caption">
+      แผนผังแสดงตำแหน่งอาคารโรงพยาบาลไพรบึง
+    </div>
+  </div>
+
+  <div class="sidebar sidebar-left">
+    <ul>
+      <li onclick="showPopup('images/OPD.png')">OPD</li>
+      <li onclick="showPopup('รูปภาพ/ตึกกลาง.png')">ตึกกลาง</li>
+      <li onclick="showPopup('images/ตึกกายภาพ.png')">ตึกกายภาพ</li>
+      <li onclick="showPopup('images/PCC.png')">ตึก PCC</li>
+      <li onclick="showPopup('images/อำนวยการ.png')">ตึกอำนวยการ</li>
+      <li onclick="showPopup('images/IPD.png')">IPD</li>
+    </ul>
+  </div>
+
+  <div class="sidebar sidebar-right">
+    <ul>
+      <li onclick="showPopup('images/เวชระเบียน.png')">เส้นทางขนย้ายมูลฝอยติดเชื้อ</li>
+      <li onclick="showPopup('images/ตั้งค่า.png')">เส้นทางน้ำ</li>
+      <li onclick="showPopup('images/ตั้งค่า.png')">เส้นทางท่อระบายน้ำ</li>
+    </ul>
+  </div>
+
+  <div class="overlay" id="overlay" onclick="hidePopup()"></div>
+  <div class="popup" id="popup">
+    <img id="popupImage" src="" alt="Popup Image">
+  </div>
+
+  <script src="js/popup.js"></script>
+</body>
+</html>
